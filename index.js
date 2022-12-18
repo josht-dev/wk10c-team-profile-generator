@@ -168,15 +168,12 @@ const globalFunc = {
     addManager: async function() {
         await inquirer.prompt(managerQuestions).then(res => {
             // Add team manager data to myTeam array
-            //myTeam.push(res);
             myTeam.push(new Manager(
                 res.name,
                 res.id,
                 res.email,
                 res.officeNum
             ));
-            // Add manager title to myTeam array
-            //myTeam[0].title = 'manager';
             // Call menu to add team members
             this.menu();
         });
@@ -198,17 +195,34 @@ const globalFunc = {
                 this.addMember(response.title);
                 return;
             } else {
-                // REMOVE - see test data
-                console.log(myTeam);
                 return console.log('Now building team profile page...');
             }
         });
     },
     // Prompt user for new team member data
     addMember: async function(title) {
-        await inquirer.prompt(teamQuestions, {'title': title.toLowerCase()}).then(response => {
+        await inquirer.prompt(teamQuestions, {'title': title.toLowerCase()}).then(res => {
             // Add team member data to myTeam array
-            myTeam.push(response);
+            switch (res.title) {
+                case 'engineer':
+                    myTeam.push(new Engineer(
+                        res.name,
+                        res.id, 
+                        res.email,
+                        res.gitHub
+                    ));
+                    break;
+                case 'intern':
+                    myTeam.push(new Intern(
+                        res.name,
+                        res.id, 
+                        res.email,
+                        res.school
+                    ));
+                    break;
+                default:
+                    console.error('ERROR: Something went wrong!');
+            }
             // Recall the menu prompt
             this.menu();
             return;
