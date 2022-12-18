@@ -34,25 +34,25 @@ function init() {
             {
                 type: 'input',
                 message: "Enter the team manager's name: ",
-                title: 'name',
-                validate: function(val) {
+                name: 'name',
+                validate: function(name) {
                     // User must enter a name
-                    return (val) ? true : false;
+                    return (name) ? true : false;
                 }
             },
             {
                 type: 'input',
                 message: "Enter the employee ID: ",
-                title: 'id',
-                validate: function(val) {
+                name: 'id',
+                validate: function(id) {
                     // User must enter an id
-                    return (val) ? true : false;
+                    return (id) ? true : false;
                 }
             },
             {
                 type: 'input',
                 message: "Enter the manager's email address: ",
-                title: 'email',
+                name: 'email',
                 validate: function(email) {
                     // Use regex to validate a proper email
                     const validation = 
@@ -64,10 +64,10 @@ function init() {
             {
                 type: 'input',
                 message: "Enter the manager's office number: ",
-                title: 'officeNum',
-                validate: function(val) {
+                name: 'officeNum',
+                validate: function(officeNum) {
                     // User must enter a number
-                    return (typeof(val) === 'number') ? true : false;
+                    return (!isNaN(officeNum)) ? true : false;
                 }
             }
         ])
