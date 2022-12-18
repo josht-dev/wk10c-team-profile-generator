@@ -166,11 +166,17 @@ const globalFunc = {
     },
     // Prompt user for team manager data
     addManager: async function() {
-        await inquirer.prompt(managerQuestions).then(response => {
+        await inquirer.prompt(managerQuestions).then(res => {
             // Add team manager data to myTeam array
-            myTeam.push(response);
+            //myTeam.push(res);
+            myTeam.push(new Manager(
+                res.name,
+                res.id,
+                res.email,
+                res.officeNum
+            ));
             // Add manager title to myTeam array
-            myTeam[0].title = 'manager';
+            //myTeam[0].title = 'manager';
             // Call menu to add team members
             this.menu();
         });
