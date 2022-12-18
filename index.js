@@ -167,9 +167,9 @@ const globalFunc = {
     // Prompt user for team manager data
     addManager: async function() {
         await inquirer.prompt(managerQuestions).then(response => {
-            // Add team manager data to myTeam obj
+            // Add team manager data to myTeam array
             myTeam.push(response);
-            // Add manager title to myTeam obj
+            // Add manager title to myTeam array
             myTeam[0].title = 'manager';
             // Call menu to add team members
             this.menu();
@@ -201,7 +201,7 @@ const globalFunc = {
     // Prompt user for new team member data
     addMember: async function(title) {
         await inquirer.prompt(teamQuestions, {'title': title.toLowerCase()}).then(response => {
-            // Add team member data to myTeam obj
+            // Add team member data to myTeam array
             myTeam.push(response);
             // Recall the menu prompt
             this.menu();
