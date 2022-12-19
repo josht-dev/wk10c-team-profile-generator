@@ -4,7 +4,7 @@ class Html {
     constructor(manager, engineers, interns) {
         this.manager = manager;
         this.engineers = engineers;
-        this.inters = interns
+        this.interns = interns;
     }
     
     // Generate the !DOCTYPE, html, and head elements
@@ -62,8 +62,6 @@ class Html {
                         </div>
                         <!-- Team member title -->
                         <div>
-                            <!-- Title icon -->
-        
                             <!-- Title name -->
                             <h2>${memberObj.getRole()}</h2>
                         </div>
