@@ -4,6 +4,8 @@ const fs = require('fs');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const Html = require('./src/Html');
+const { css, reset} = require('./src/Css');
 
 // *****DOM Variables and Buttons*****
 
@@ -228,10 +230,70 @@ const globalFunc = {
             this.menu();
             return;
         })
+    },
+    // Generate html, css, and reset files
+    generateFiles: function() {
+        // Variables to hold file contents
+        const htmlPage = new Html(
+            myTeam[0],
+            myTeam.filter((member) => {return member.getRole() === 'Engineer';}),
+            myTeam.filter((member) => {return member.getRole() === 'Intern';})
+        );
+        const resetStyling = reset;
+        const styling = css;
+
+
+        console.log(htmlPage.getHtmlSkeleton());
+
     }
 };
 
 // *****Code Ran at Load*****
 
 // Initialize the application
-globalFunc.init();
+//globalFunc.init();
+
+// REMOVE - TESTING ONLY
+myTeam.push(new Manager(
+    'test manager',
+    '1',
+    'manager@gmail.com',
+    '34'
+));
+
+myTeam.push(new Engineer(
+    'eng1',
+    '2', 
+    'eng1@gmail.com',
+    'eng1-dev'
+));
+
+myTeam.push(new Intern(
+    'int1',
+    '3', 
+    'int1@gmail.com',
+   'Denver University'
+));
+
+myTeam.push(new Engineer(
+    'eng2',
+    '4', 
+    'eng2@gmail.com',
+    'eng2-dev'
+));
+
+myTeam.push(new Intern(
+    'int2',
+    '5', 
+    'int2@gmail.com',
+   'Golden University'
+));
+
+myTeam.push(new Engineer(
+    'eng3',
+    '6', 
+    'eng3@gmail.com',
+    'eng3-dev'
+));
+
+globalFunc.generateFiles();
