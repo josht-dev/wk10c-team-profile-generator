@@ -242,9 +242,16 @@ const globalFunc = {
         const resetStyling = reset;
         const styling = css;
 
-
-        console.log(htmlPage.getHtmlSkeleton());
-
+        // Save the html and styling to files in dist folder
+        fs.writeFile('./dist/index.html', htmlPage.getHtmlSkeleton(), (err) => {
+            err ? console.error(err) : console.log('Page created! Saved to ./dist/index.html.');
+        });
+        fs.writeFile('./dist/reset.css', resetStyling, (err) => {
+            err ? console.error(err) : console.log('Browser style equalized! Saved to ./dist/reset.css.');
+        });
+        fs.writeFile('./dist/style.css', styling, (err) => {
+            err ? console.error(err) : console.log('Page styled! Saved to ./dist/style.css.');
+        });
     }
 };
 
