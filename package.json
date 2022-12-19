@@ -4,10 +4,10 @@
   "description": "An application to accept user input for a team and generate a html profile page for that team and it's members.",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "./_tests_"
   },
   "scripts": {
-    "test": "index"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/josht-dev/wk10c-team-profile-generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.4",
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
     "jest": "^29.3.1"
   }
 }
