@@ -1,0 +1,82 @@
+
+/* Styling Variables */
+:root {
+    --color-primary: #1cb9b3;
+    --color-on-primary: #FEFAED;
+    --color-secondary: #badf9c;
+    --color-on-secondary: #000;
+    --color-bg: #fff;
+    --color-bg-secondary: #FEFAED;
+}
+
+/* Universal Styling */
+* {
+    font-family: "Montserrat", serif;
+}
+
+/* Header/Navbar Styling */
+header {
+    background-color: var(--color-primary);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: var(--color-on-primary);
+    font-size: xx-large;
+}
+
+/* Main Content Styling */
+body {
+    background-color: var(--color-bg-secondary);
+    min-width: 23.5rem;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card Styling */
+.container-card {
+    width: 15rem;
+    margin: 1.5rem;
+    border: .1rem solid #000;
+    border-radius: .5rem;
+    background-color: var(--color-bg);
+}
+
+/* Card Header Styling */   
+.card-title {
+    background-color: var(--color-secondary);
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    text-align: center;
+}
+
+/* Card Body Styling */
+.card-body {
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    height: fit-content;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-field {
+    background-color: var(--color-bg-secondary);
+    margin: .15rem;
+    width: 14rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-field h3, .card-field span, .card-field a {
+    padding: 0 .25rem;
+}

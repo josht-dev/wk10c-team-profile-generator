@@ -215,7 +215,7 @@ const globalFunc = {
                         res.name,
                         res.id, 
                         res.email,
-                        res.gitHub
+                        res.githubUser
                     ));
                     break;
                 case 'intern':
