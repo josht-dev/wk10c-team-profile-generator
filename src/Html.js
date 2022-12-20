@@ -37,7 +37,7 @@ class Html {
                         title = `<span>${memberObj.officeNumber}</span>`;
                         break;
                     case 'Engineer':
-                        title = `<a href="https://github.com/${memberObj.getGithub()}">${memberObj.getGithub()}</a>`;
+                        title = `<a href="https://github.com/${memberObj.getGithub()}" target="_blank">${memberObj.getGithub()}</a>`;
                         break;
                     case 'Intern':
                         title = `<span>${memberObj.getSchool()}</span>`;
