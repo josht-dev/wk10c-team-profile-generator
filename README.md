@@ -19,9 +19,9 @@ The application will dynamically generate a team profile page. It uses the jest 
 
 Opening a terminal into the application directory and running 'node index' will start the application. Follow the prompts to add all the members of your team and their required information. The application will generate the page for your team profile page. It will be saved in the 'dist' folder.
 
-    ![video walkthrough]()
+A video walkthrough of the application: https://drive.google.com/file/d/16EQ7VB65mc21HkrCsLU5uiFyr5cEkLzq/view
 
-    ![screenshot](./assets/screenshot.png)
+![screenshot](./assets/screenshot.png)
 
 ## Credits
 
