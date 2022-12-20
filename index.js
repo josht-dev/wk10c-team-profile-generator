@@ -198,7 +198,10 @@ const globalFunc = {
                 this.addMember(response.title);
                 return;
             } else {
-                return console.log('Now building team profile page...');
+                console.log('Now building team profile page...');
+                // Generate and output the html/css files
+                this.generateFiles();
+                return;
             }
         });
     },
@@ -258,49 +261,4 @@ const globalFunc = {
 // *****Code Ran at Load*****
 
 // Initialize the application
-//globalFunc.init();
-
-// REMOVE - TESTING ONLY
-myTeam.push(new Manager(
-    'test manager',
-    '1',
-    'manager@gmail.com',
-    '34'
-));
-
-myTeam.push(new Engineer(
-    'eng1',
-    '2', 
-    'eng1@gmail.com',
-    'eng1-dev'
-));
-
-myTeam.push(new Intern(
-    'int1',
-    '3', 
-    'int1@gmail.com',
-   'Denver University'
-));
-
-myTeam.push(new Engineer(
-    'eng2',
-    '4', 
-    'eng2@gmail.com',
-    'eng2-dev'
-));
-
-myTeam.push(new Intern(
-    'int2',
-    '5', 
-    'int2@gmail.com',
-   'Golden University'
-));
-
-myTeam.push(new Engineer(
-    'eng3',
-    '6', 
-    'eng3@gmail.com',
-    'eng3-dev'
-));
-
-globalFunc.generateFiles();
+globalFunc.init();
