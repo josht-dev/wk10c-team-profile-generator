@@ -10,10 +10,7 @@ class Html {
     // Generate the !DOCTYPE, html, and head elements
     getHtmlSkeleton() {
         // Internal function to create the card html
-        function htmlCard(memberObj) {
-            console.log('htmlcard function; ');
-            console.log(memberObj);
-            
+        function htmlCard(memberObj) {            
             // The last field in the html card is dependent on title
             const htmlH3 = (title) => {
                 switch (title) {
@@ -40,7 +37,6 @@ class Html {
                         title = `<span>${memberObj.officeNumber}</span>`;
                         break;
                     case 'Engineer':
-                        console.log(memberObj.getGithub());
                         title = `<a href="https://github.com/${memberObj.getGithub()}" target="_blank">${memberObj.getGithub()}</a>`;
                         break;
                     case 'Intern':
