@@ -78,7 +78,7 @@ class Html {
                     <!-- Team member email -->
                     <div class="card-field">
                         <h3>Email: </h3>
-                        <a href="">${memberObj.email}</a>
+                        <a href="mailto:${memberObj.email}">${memberObj.email}</a>
                     </div>
                     <!-- Team member GitHub or office number -->
                     <div class="card-field">
